@@ -25,7 +25,7 @@ contents.each do |content|
             end
             outputLine += ",{\"s\":\"#{r}\"}"
           end
-          outputLine += "]}"
+          outputLine += "]}}"
           outputFile.puts(outputLine)
           next
         end
