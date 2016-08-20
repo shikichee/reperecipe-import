@@ -6,16 +6,11 @@ unless ARGV.length == 2 then
     exit
 end
 
-columnName = []
 outputFile = File.open(ARGV[1],'a')
 headers, *contents = CSV.read(ARGV[0])
-p contents
 contents.each do |content|
   content.each_with_index do |line, i|
-    puts headers
-    outputLine = ""
-    puts "#1"
-    outputLine += "{"
+    outputLine = "{"
     content.each_with_index do |e, j|
       if e.nil? || e.empty? then
         next
